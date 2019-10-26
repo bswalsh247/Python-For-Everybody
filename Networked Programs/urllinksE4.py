@@ -18,24 +18,25 @@ soup = BeautifulSoup(html, 'html.parser')
 # Retrieve all of the anchor tags
 paragraphs = soup.find('p')
 # count = 0
-# for paragraph in paragraphs:
+for paragraph in paragraphs:
+    print(paragraph.get('p', None))
 #     count += len(paragraph)
 #     print(count)
 
 
-    linecount = 0
-    paragraphcount = 0
-    empty = True
-    for i in f:
-        if '\n' in i:
-            linecount += 1
-            if len(i) < 2:
-                empty = True
-            elif len(i) > 2 and empty is True:
-                paragraphcount = paragraphcount + 1
-                empty = False
-            if empty is True:
-                paragraphnumber = 0
-            else:
-                paragraphnumber = paragraphcount
-        print('%-4d %4d %s' % (paragraphnumber, linecount, i))
+    # linecount = 0
+    # paragraphcount = 0
+    # empty = True
+    # for i in f:
+    #     if '\n' in i:
+    #         linecount += 1
+    #         if len(i) < 2:
+    #             empty = True
+    #         elif len(i) > 2 and empty is True:
+    #             paragraphcount = paragraphcount + 1
+    #             empty = False
+    #         if empty is True:
+    #             paragraphnumber = 0
+    #         else:
+    #             paragraphnumber = paragraphcount
+    #     print('%-4d %4d %s' % (paragraphnumber, linecount, i))
